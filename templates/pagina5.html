@@ -1,0 +1,97 @@
+<!--Pagina 5 - Formulario Web MATRICULAS-->
+
+{% extends "layout.html" %} <!--Coloca el codigo del archivo layout.html-->
+
+
+{% block content %} <!--Bloque de contenido: Imagenes, texto propio de la pagina-->
+
+<!--Matriculas -->
+<br><br><br>
+<h1> <P align="left"> Matriculas </P> </h1>
+<br><br><br>
+<!--inicio del Formulario::: action=/"agregar_registro_matricula"    -->
+<form action="/agregar_registro_matricula" method="POST">
+    <table>
+    <!--Fila 1 >-->
+    <tr>
+        <td> <label for="id_matricula">Codigo matricula: </label></td>
+        <td> <input type="text" id="id_matricula" name="id_matricula" /><br></td>
+    </tr>
+    <!--Fila 2 >-->
+    <tr>
+        <td> <label for="id_estudiante">Codigo estudiante: </label></td>
+        <td> <input type="text" id="id_estudiante" name="id_estudiante" /><br></td>
+    </tr>
+    <!--Fila 3 >-->
+    <tr>
+        <td> <label for="fecha_matricula">Fecha: </label></td>
+        <td> <input type="date" id="fecha_matricula" name="fecha_matricula" /><br></td>
+    </tr>
+    
+    <!--Fila 4 >-->
+    <tr>
+        <td> <label for="id_categoria">Codigo Categoria: </label></td>
+        <td> <input type="text" id="id_categoria" name="id_categoria" /><br></td>
+    </tr>
+    <!--Fila 5 >-->
+    <tr>
+        <td> <label for="id_horario">Codigo horario: </label></td>
+        <td> <input type="text" id="id_horario" name="id_horario" /><br></td>
+    </tr>
+    <!--Fila 6 >-->
+    <tr>
+        <td> <label for="valor_matricula">valor matricula: </label></td>
+        <td> <input type="text" id="valor_matricula" name="valor_matricula" /><br></td>
+    </tr>
+    <!--Fila 7 >-->
+    <tr>
+        <td> <label for="valor_mensualidad">valor mensualidad: </label></td>
+        <td> <input type="text" id="valor_mensualidad" name="valor_mensualidad" /><br></td>
+    </tr>
+    <!--Fila 8 >-->
+    <tr>
+        <td> <label for="id_instructor">Codigo instructor: </label></td>
+        <td> <input type="text" id="id_instructor" name="id_instructor" /><br></td>
+    </tr>
+    </table>
+    
+    <br>
+    <br>
+
+        <input type="submit" id="boton_registrar" name="boton_registrar" value="Registrar" />
+    </form>
+    
+<br>
+<br>
+    <table>
+        <thead>
+            <td>Codigo matricula</td>
+            <td>Codigo estudiante</td>
+            <td>Fecha</td>
+            <td>Codigo Categoria:</td>
+            <td> Horario</td>
+            <td>Valor matricula</td>
+            <td>Valor mensual</td>
+            <td>Codigo Instructor</td>
+            <td>Operaciones</td>
+        </thead>
+        <tbody>
+            {% for categoria in categorias %}
+            <tr>
+                <td>{{categoria.0}}</td>
+                <td>{{categoria.1}}</td>
+                <td><a href="/editarcategoria/{{categoria.0}}">Editar</a></td>
+                <td><a href="/borrarcategoria/{{categoria.0}}">Eliminar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<br><br><br><br>
+
+
+
+
+
+
+
+{% endblock %} <!--Bloque de contenido-->

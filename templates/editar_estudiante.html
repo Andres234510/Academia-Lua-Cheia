@@ -1,0 +1,54 @@
+<form action="/actualizarestudiante/{{cat.1}}" method="POST">
+    <table>
+    <!--Fila 1 >-->
+        <tr>
+            <td> <label for="tipo_documento">Tipo documento: </label></td>
+            <td>
+                <select name="tipo_documento" value="{{cat.0}}">
+                    <option value="T.I.">T.I.</option>
+                    <option value="Cedula">Cedula</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                    <option value="NIT">NIT</option>
+                </select>
+<br>
+            </td>
+        </tr>
+    <!--Fila 2 >-->
+        <tr>
+            <td> <label for="id_estudiante">Documento Estudiante: </label></td>
+            <td> <input type="text" id="id_estudiante" name="id_estudiante" value="{{cat.1}}" /><br></td>
+        </tr>
+
+    <!--Fila 3 >-->
+        <tr>
+            <td> <label for="nombres">Nombres: </label></td>
+            <td> <input type="text" id="nombres" name="nombres" value="{{cat.2}}" /><br></td>
+        </tr>
+
+    <!--Fila 4 >-->
+        <tr>
+            <td> <label for="apellidos">Apellidos: </label></td>
+            <td> <input type="text" id="apellidos" name="apellidos" value="{{cat.3}}" /><br></td>
+        </tr>
+
+    <!--Fila 5 >-->
+        <tr>
+            <td> <label for="direccion">Direccion: </label></td>
+            <td> <input type="text" id="direccion" name="direccion" value="{{cat.4}}" /><br></td>
+        </tr>
+
+    <!--Fila 6 >-->
+        <tr>
+            <td> <label for="celular">Celular: </label></td>
+            <td> <input type="text" id="celular" name="celular" value="{{cat.5}}" /><br></td>
+        </tr>
+
+        <!--Fila 7 >-->
+        <tr>
+            <td> <label for="email">Email: </label></td>
+            <td> <input type="text" id="email" name="email" value="{{cat.6}}" /><br></td>
+        </tr>
+
+    </table>
+        <input type="submit" id="boton_registrar" name="boton_registrar" value="Registrar" />
+</form>

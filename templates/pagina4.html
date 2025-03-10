@@ -1,0 +1,53 @@
+<!--Pagina 4 - Formulario Web CATEGORIAS-->
+
+{% extends 'layout.html' %} <!--Coloque el codigo-->
+
+
+{% block content %}  <!--Bloque contenido-->
+
+<br><br><br>
+<h1> <P align="left"> Categorias </P> </h1>
+<br><br><br><br>
+
+<!--inicio del Formulario::: action=/"agregar_categoria"    -->
+<form action="/agregar_categoria" method="POST">
+    <table>
+    <!--Fila 1 >-->
+    <tr>
+     <td> <label for="id_categoria">Codigo Categoria: </label></td>
+     <td> <input type="text" id="id_categoria" name="id_categoria" /><br></td>
+    </tr>
+    <!--Fila 2 >-->
+    <tr>
+     <td> <label for="descripcion_categoria">Descripcion: </label></td>
+     <td> <input type="text" id="descripcion_categoria" name="descripcion_categoria" /><br></td>
+     </tr>
+    </table>
+    
+    <br>
+    <br>
+
+     <input type="submit" id="boton_registrar" name="boton_registrar" value="Registrar" />
+    </form>
+    
+<br>
+<br>
+    <table>
+        <thead>
+            <td>Codigo</td>
+            <td>Descripcion</td>
+            <td>Operaciones</td>
+        </thead>
+        <tbody>
+            {% for categoria in categorias %}
+            <tr>
+                <td>{{categoria.0}}</td>
+                <td>{{categoria.1}}</td>
+                <td><a href="/editarcategoria/{{categoria.0}}">Editar</a></td>
+                <td><a href="/borrarcategoria/{{categoria.0}}">Eliminar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    {% endblock  %}  <!--Fin Bloque contenido-->

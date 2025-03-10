@@ -1,0 +1,111 @@
+<!--Pagina 3 - Formulario Web INSTRUCTORES-->
+
+{% extends 'layout.html' %} <!--Coloque el codigo-->
+
+{% block content %}  <!--Bloque contenido-->
+
+<!--Instructores -->
+
+<br><br><br>
+<h1> <P align="left"> Instructores </P> </h1>
+<br><br><br><br>
+
+<!--inicio del Formulario::: action=/"agregar_instructor"    -->
+<form action="/agregar_instructor" method="post">
+
+        <table> 
+            
+        <!--Fila 1 >--> 
+        <tr> 
+            <td>   <label for="tipo_documento">Tipo de Documento: </label></td>
+            <td> 
+                <select name="tipo_documento"> 
+                    <option value="T.I.">T.I.</option> 
+                    <option value="Cedula" selected>Cedula</option> 
+                    <option value="Pasaporte">Pasaporte</option> 
+                    <option value="NIT">NIT</option> 
+                
+                </select> 
+                
+                <br></td>
+            </tr>
+        
+        <!--Fila 2 >--> 
+    
+        <tr> 
+            <td> <label for="id_instructor">Documento Identidad: </label></td> 
+            <td> <input type="text" id="id_instructor" name="id_instructor" /><br></td> 
+        </tr>  
+        
+            <!--Fila 3 >--> 
+        <tr> 
+            <td> <label for="nombres">Nombres: </label></td> 
+            <td> <input type="text" id="nombres" name="nombres" /><br></td> 
+        </tr> 
+        
+            <!--Fila 4 >--> 
+        <tr> 
+            <td> <label for="apellidos">Apellidos: </label></td> 
+            <td> <input type="text" id="apellidos" name="apellidos" /><br></td> 
+        </tr> 
+            <!--Fila 5 >--> 
+        <tr> 
+            <td> <label for="direccion">Direccion: </label></td> 
+            <td> <input type="text" id="direccion" name="direccion" /><br></td> 
+        </tr> 
+            <!--Fila 6 >--> 
+        <tr> 
+            <td> <label for="celular">Celular: </label></td> 
+            <td> <input type="text" id="celular" name="celular" /><br></td> 
+        </tr>
+            <!--Fila 7 >--> 
+        <tr> 
+            <td> <label for="email">Email: </label></td> 
+            <td> <input type="text" id="email" name="email" /><br></td> 
+        </tr> 
+    <br>
+    <br>
+        </table>
+    
+            <input type="submit" id="boton_registrar" name="boton_registrar" value="Registrar" />
+    
+    </from>
+
+    <br>
+    <br>
+        <table>
+        
+            <thead>
+                <tr>
+                    <td>Tipo documento- </td>
+                    <td> -Id instructor- </td>
+                    <td> -Nombres- </td>
+                    <td> -Apellidos- </td>
+                    <td> -Direccion- </td>
+                    <td> -Celular- </td>
+                    <td> -Email </td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for id_instructor in id_instructores %}
+                <tr>
+                        <td>{{id_instructor.0}}</td>
+                        <td>{{id_instructor.1}}</td>
+                        <td>{{id_instructor.2}}</td>
+                        <td>{{id_instructor.3}}</td>
+                        <td>{{id_instructor.4}}</td>
+                        <td>{{id_instructor.5}}</td>
+                        <td>{{id_instructor.6}}</td>
+                
+                        <td><a href="/editarinstructor/{{id_instructor.1}}">Editar</a></td>
+        
+                        <td><a href="/borrarinstructor/{{id_instructor.1}}">Eliminar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        NOTA::::: GUARDA LOS REGISTROS DE LOS INSTRUCTORES PERO NO SALE EL REPORTE DE LA CONSULTA DE LA TABLA....
+        <BR>  ANALIZAR--- Mirar arcchivo pagina3.html y las funciones del INDEX INSTRUCTOR
+
+        {% endblock  %}  <!--Fin Bloque contenido-->

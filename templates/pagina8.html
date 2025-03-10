@@ -1,0 +1,37 @@
+<!--Pagina 8 - Formulario Web FOTOGALERIA-->
+
+{% extends 'layout.html' %} <!--Coloque el codigo-->
+
+
+{% block content %}  <!--Bloque contenido dinamico-->
+
+
+<br><br><br>
+<center><h3>Fotogaleria</h3></center>
+<center></center>
+
+<center>
+<table width="50%" border="1" >
+    <tr style="background-color: #5e2129">
+      <td rowspan="3"><img src="../static/imagenes/grupo.png"  height="600" width="300"></td>
+      
+      <td><video width="200" height="200" poster="miposter.jpg"  controls><source src="../static/Videos/7.mp4" type="video/mp4"></video></td>
+      <td><video width="200" height="200" poster="miposter.jpg"  controls><source src="../static/Videos/8.mp4" type="video/mp4"></video></td>
+      <td><video width="200" height="200" poster="miposter.jpg"  controls><source src="../static/Videos/9.mp4" type="video/mp4"></video></td>
+    </tr>
+    <tr>
+      <td><video width="200" height="200" poster="miposter.jpg"  controls><source src="../static/Videos/11.mp4" type="video/mp4"></video></td>
+      <td><img src="../static/imagenes/1686088545815.jpg" height="200" width="200"></td>
+      <td><img src="../static/imagenes/1686088545822.jpg" height="200" width="200"></td>
+    </tr>
+    <tr>
+      <td><img src="../static/imagenes/1686088545827.jpg" height="200" width="200"></td>
+      <td><img src="../static/imagenes/1686088545832.jpg" height="200" width="200"></td>
+      <td><img src="../static/imagenes/1686088545839.jpg" height="200" width="200"></td>
+    </tr>
+  </table>
+</center>
+
+
+    
+{% endblock  %}  <!--Fin Bloque contenido-->

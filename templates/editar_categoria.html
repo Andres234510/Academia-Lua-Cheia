@@ -1,0 +1,18 @@
+
+
+<form action="/actualizarcategoria/{{cat.0}}" method="POST">
+    <table>
+    <!--Fila 1 >-->
+    <tr>
+        <td> <label for="id_categoria">Codigo Categoria: </label></td>
+        <td> <input type="text" id="id_categoria" name="id_categoria" value="{{cat.0}}"/><br></td>
+    </tr>
+    <!--Fila 2 >-->
+    <tr>
+        <td> <label for="descripcion_categoria">Descripcion: </label></td>
+        <td> <input type="text" id="descripcion_categoria" name="descripcion_categoria" value="{{cat.1}}" /><br></td>
+    </tr>
+    </table>
+        <input type="submit" id="boton_registrar" name="boton_registrar" value="Registrar" />
+    </form>
+    

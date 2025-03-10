@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset ="UTF=8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACADEMIA LUA CHEIA</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+
+</head>
+<body class="body1">
+  <br>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="nav">
+      <ul1>
+        <li1><a class="nav-link active" aria-current="page" href="/">Inicio</a></li1>
+        
+        <li1><a class="nav-link" href="{{url_for('pagina2')}}">Estudiantes</a></li1>
+        <li1><a class="nav-link" href="{{url_for('pagina3')}}">Instructores</a></li1>
+        <li1><a class="nav-link" href="{{url_for('pagina4')}}">Categoria</a></li1>
+        <li1><a class="nav-link" href="{{url_for('pagina5')}}">Matriculas</a></li1>
+        <li1><a class="nav-link" href="{{url_for('pagina6')}}">Evaluaciones</a></li1>
+        <li1><a class="nav-link" href="{{url_for('pagina8')}}">Fotogaleria</a></li1>
+        <li1><a class="nav-link" href="{{url_for('pagina9')}}">Creditos</a></li1>
+      </ul1>
+    </div>
+  </nav>      
+
+    {% block content %}
+
+    {% endblock  %}
+</body>
+</html>
+

@@ -1,0 +1,1 @@
+SELECT * FROM `bd_ventas`.`categorias` LIMIT 1000;
